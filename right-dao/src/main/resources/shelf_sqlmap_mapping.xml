@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cici.rich.common.shelf.ShelfDO">
+
+	<resultMap type="ShelfDO" id="map-result">
+		<result property="id" column="id" />
+		<result property="numIid" column="num_iid" />
+	</resultMap>
+
+	<select id="select" resultType="ShelfDO">
+		<![CDATA[
+		select * from shelf
+		]]>
+	</select>
+
+	<select id="selectPk" resultType="ShelfDO" parameterType="java.lang.Integer">
+		<![CDATA[
+		select * from shelf where id = #{id}
+		]]>
+	</select>
+
+	<update id="update" parameterType="ShelfDO">
+		<![CDATA[
+			update shelf set num_iid = #{numIid} where id = #{id}
+		]]>
+	</update>
+</mapper>

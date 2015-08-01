@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fish.spider.dao.daomapper.WebSiteMapper">
+	<resultMap type="WebSiteDO" id="website-info">
+		<result property="webId" column="web_id"/>
+		<result property="name" column="name"/>
+		<result property="logo" column="logo"/>
+		<result property="accessTime" column="access_time"/>
+	</resultMap>
+
+	<select id="queryAllWebSite" resultMap="website-info">
+		<![CDATA[
+			select web_id webId, name, logo, date_format(access_time,'%Y-%c-%d %h:%i:%s') accessTime from web_site
+		]]>
+	</select>
+	
+	<update id="updateAccessTimeForID" parameterType="int">
+		<![CDATA[
+			update web_site set access_time=now() where web_id = #{id}
+		]]>
+	</update>
+</mapper>
