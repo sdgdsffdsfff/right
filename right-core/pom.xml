@@ -10,7 +10,7 @@
 	<groupId>com.cici.right.core</groupId>
 	<artifactId>right-core</artifactId>
 	<version>1.0</version>
-	<name>rich-biz-core</name>
+	<name>rich-core</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +30,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.cici.rich.common</groupId>
+			<groupId>com.cici.right.common</groupId>
 			<artifactId>right-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>

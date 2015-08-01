@@ -12,7 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<org.springframework.version>4.2.0.RELEASE</org.springframework.version>
+	<spring.version>4.2.0.RELEASE</spring.version>
   </properties>
 
   <dependencies>    
@@ -26,8 +26,22 @@
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
-		<version>4.2.0.RELEASE</version>
+		<version>${spring.version}</version>
 	</dependency>
+	
+	<!-- dao start -->
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		<version>1.2.3</version>
+	</dependency>
+	<!-- dao end -->
 
 	<dependency>
 		<groupId>javax.servlet</groupId>
